@@ -1,0 +1,69 @@
+/*
+ * Copyright (c) 2020-2024 Antmicro <www.antmicro.com>
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/* Background for bokeh plots */
+.bk-root {
+  background: var(--md-code-bg-color);
+  padding: 0.5em;
+  border-radius: 0.1rem;
+}
+
+/* Centring of bokeh plots in divs instead of figure */
+div.figure.align-center {
+  display: flex !important;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+div.figure.align-center img,
+figure.align-center img {
+  background: var(--md-code-bg-color);
+  padding: 0.5em;
+  border-radius: 0.1rem;
+}
+
+/* Styles for custom tooltip */
+div.bk-tooltip-custom {
+  background-color: var(--md-code-bg-color) !important;
+  border-color: var(--md-default-bg-color) !important;
+  text-align: left;
+}
+
+.bk-tt-entry-name .bk-tt-entry-value {
+  font-family: var(--md-code-font-family);
+}
+
+.bk-tt-entry-name {
+  color: var(--md-code-hl-keyword-color);
+  padding-right: 0.5em;
+}
+
+.bk-tt-entry-name:after {
+  content: ": ";
+}
+
+.bk-tt-entry-value {
+  color: var(--md-code-hl-number-color);
+}
+
+/* Changing color of tooltip's arrow */
+.bk-root .bk-tooltip.bk-right.bk-tooltip-arrow::after {
+  border-left-color: var(--md-default-bg-color) !important;
+}
+
+.bk-root .bk-tooltip.bk-left.bk-tooltip-arrow::before {
+  border-right-color: var(--md-default-bg-color) !important;
+}
+
+.bk-root .bk-tooltip.bk-below::after {
+  border-top-color: var(--md-default-bg-color) !important;
+}
+
+.bk-root .bk-tooltip.bk-above::before {
+  border-bottom-color: var(--md-default-bg-color) !important;
+}
